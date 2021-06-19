@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3310,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "igniweb",
+            "database": "igniweb",
+            "username": "root"
+        }
+    ]
+}
