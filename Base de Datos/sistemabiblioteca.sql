@@ -193,8 +193,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `codigo_trabajador`, `num_documento`, `nombre`, `profesion`, `cargo`, `direccion`, `telefono`, `email`, `login`, `clave`) VALUES
-(1, '123456', '11128801', 'Edward Andres Aristizabal Montalvo', 'Tecnólogo en Sistemas', 'Administrador', 'Santiago de Cali', '3172954239', 'edwardaristizabal@yahoo.es', 'edwardaristizabal', 'Ed120690#'),
-(2, '789012', '11438371', 'David Fernando Rendon Castro', 'Estudiante', 'Usuario', 'Guadalajara de Buga', '3178680585', 'deivicitorendon@gmail.com', 'deivicitorendon', 'Tita2020#'),
+(1, '123456', '11128801', 'Edward Andres Aristizabal Montalvo', 'Tecnólogo en Sistemas', 'Administrador', 'Santiago de Cali', '3173954359', 'edwardaristi@yahoo.es', 'edwardaristi', 'ed120690'),
+(2, '789012', '11438371', 'David Fernando Rendon Castro', 'Estudiante', 'Usuario', 'Guadalajara de Buga', '3178880055', 'deivirendo@gmail.com', 'deivirendon', 'Tita2020'),
 (3, '345678', '12345678', 'Usuario Pruebas', 'Pruebas', 'Administrador', 'Calima El Darién', '555555555', NULL, 'admin', 'admin');
 
 --
