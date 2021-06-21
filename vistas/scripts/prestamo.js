@@ -15,13 +15,6 @@ function init() {
         $('#idlibro').selectpicker('refresh');
     });
 
-    //Cargamos los items al combobox estudiante
-    $.post("../ajax/prestamo.php?op=SelectEstudiante", function(r) {
-        $("#idestudiante").html(r);
-        $('#idestudiante').selectpicker('refresh');
-    });
-    //	$('#mAlmacen').addClass("treeview active");
-    //  $('#llibros').addClass("active");
 }
 
 //Función limpiar
@@ -138,8 +131,6 @@ function mostrar(idprestamo) {
 
         $("#idlibro").val(data.idlibro);
         $('#idlibro').selectpicker('refresh');
-        $("#idestudiante").val(data.idestudiante);
-        $('#idestudiante').selectpicker('refresh');
         $("#fecha_prestamo").val(data.fecha_prestamo);
         $("#fecha_devolucion").val(data.fecha_devolucion);
         $("#cantidad").val(data.cantidad);

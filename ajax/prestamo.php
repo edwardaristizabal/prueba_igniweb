@@ -15,17 +15,17 @@ switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (empty($idprestamo)){
 			$rspta=$prestamo->insertar($idlibro,$idestudiante,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
-			echo $rspta ? "Prestamo registrado" : "Prestamo no se pudo registrar";
+			echo $rspta ? "Registered loan" : "Loan could not be registered";
 		}
 		else {
 			$rspta=$prestamo->editar($idprestamo,$idlibro,$idestudiante,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
-			echo $rspta ? "Prestamo actualizado" : "Prestamo no se pudo actualizar";
+			echo $rspta ? "Update loan" : "Loan could not be update";
 		}
 	break;
 
 	case 'anular':
 		$rspta=$prestamo->anular($idprestamo);
- 		echo $rspta ? "Libro devuelto" : "El libro esta prestado";
+ 		echo $rspta ? "Return book" : "The book is on loan";
 	break;
 
 	case 'mostrar':

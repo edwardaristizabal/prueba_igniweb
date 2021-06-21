@@ -7,7 +7,7 @@
               <div class="col-md-12">
                   <div class="box">
                     <div class="box-header with-border">
-                          <h1 class="box-title">Sin acceso</h1>
+                          <h1 class="box-title">Not Access</h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>

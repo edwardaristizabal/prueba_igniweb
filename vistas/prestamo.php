@@ -21,7 +21,7 @@ require 'header.php';
               <div class="col-md-12">
                   <div class="box">
                     <div class="box-header with-border">
-                          <h1 class="box-title">Préstamo/Devolución <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Prestar </button></h1>
+                          <h1 class="box-title">Loans/Returns <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> New Loan </button></h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -30,13 +30,13 @@ require 'header.php';
                     <div class="panel-body table-responsive" id="listadoregistros">
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                           <thead>
-                            <th>Opciones</th>
-                            <th>Libro</th>
-                            <th>Fecha Prestamo</th>
-                            <th>Fecha Devolución</th>
-                            <th>Cantidad</th>
-                            <th>Observación</th>
-                            <th>Estado</th>
+                            <th>Option</th>
+                            <th>Book</th>
+                            <th>Loan Date</th>
+                            <th>Return Date</th>
+                            <th>Quantity</th>
+                            <th>Observation</th>
+                            <th>Status</th>
                           </thead>
                           <tbody>                            
                           </tbody>
@@ -45,30 +45,30 @@ require 'header.php';
                     <div class="panel-body" id="formularioregistros">
                        <form name="formulario" id="formulario" method="POST">
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                          <label>Libro:</label>
+                          <label>Book:</label>
                           <input type="hidden" name="idprestamo" id="idprestamo">
                           <select type="text" name="idlibro" id="idlibro" class="form-control selectpicker" data-live-search="true" required></select>
                           <input type="hidden" name="idarticulo" id="idarticulo">
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-                          <label>Fecha Prestamo:</label>
-                          <input type="date" name="fecha_prestamo" id="fecha_prestamo" class="form-control" placeholder="Fecha Prestamo" required>
+                          <label>Loan Date:</label>
+                          <input type="date" name="fecha_prestamo" id="fecha_prestamo" class="form-control" placeholder="Enter loan date" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <label>Fecha Devolución:</label>
-                          <input type="date" name="fecha_devolucion" id="fecha_devolucion" class="form-control" placeholder="Fecha Devolución" required>
+                          <label>Return Date:</label>
+                          <input type="date" name="fecha_devolucion" id="fecha_devolucion" class="form-control" placeholder="Enter you Return Date" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <label>Cantidad:</label>
+                          <label>Quantity:</label>
                           <input type="number" name="cantidad" id="cantidad" class="form-control" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Observación:</label>
-                            <input type="text" class="form-control" name="observacion" id="observacion" maxlength="200" placeholder="Observación">
+                            <label>Observation:</label>
+                            <input type="text" class="form-control" name="observacion" id="observacion" maxlength="200" placeholder="Enter you observation">
                           </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                            <button id="btnCancelar" class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Save</button>
+                            <button id="btnCancelar" class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancel</button>
                           </div>
                      </form>
                     </div>

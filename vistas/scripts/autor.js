@@ -124,7 +124,7 @@ function mostrar(idautor) {
 
 //Función para desactivar registros
 function desactivar(idautor) {
-    bootbox.confirm("¿Está Seguro de desactivar la Categoría?", function(result) {
+    bootbox.confirm("¿Are you sure you want to deactivate the category?", function(result) {
         if (result) {
             $.post("../ajax/autor.php?op=desactivar", { idautor: idautor }, function(e) {
                 bootbox.alert(e);
@@ -136,7 +136,7 @@ function desactivar(idautor) {
 
 //Función para activar registros
 function activar(idautor) {
-    bootbox.confirm("¿Está Seguro de activar la Autor?", function(result) {
+    bootbox.confirm("¿Are you sure to activate the author?", function(result) {
         if (result) {
             $.post("../ajax/autor.php?op=activar", { idautor: idautor }, function(e) {
                 bootbox.alert(e);

@@ -11,17 +11,17 @@ Class Libro
 	}
 
 	//Implementamos un método para insertar registros
-	public function insertar($titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$formato,$peso,$descripcion,$imagen)
+	public function insertar($titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$descripcion,$imagen)
 	{
-		$sql="INSERT INTO libro (titulo,cantidad_disponible,idautor,ideditorial,year_edicion,idmateria,numero_paginas,formato,peso,descripcion,imagen,estado)
-		VALUES ('$titulo','$cantidad_disponible','$idautor','$ideditorial','$year_edicion','$idmateria','$numero_paginas','$formato','$peso','$descripcion','$imagen','1')";
+		$sql="INSERT INTO libro (titulo,cantidad_disponible,idautor,ideditorial,year_edicion,idmateria,numero_paginas,descripcion,imagen,estado)
+		VALUES ('$titulo','$cantidad_disponible','$idautor','$ideditorial','$year_edicion','$idmateria','$numero_paginas','$descripcion','$imagen','1')";
 		return ejecutarConsulta($sql);
 	}
 
 	//Implementamos un método para editar registros
-	public function editar($idlibro,$titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$formato,$peso,$descripcion,$imagen)
+	public function editar($idlibro,$titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$descripcion,$imagen)
 	{
-		$sql="UPDATE libro SET titulo='$titulo',cantidad_disponible='$cantidad_disponible',idautor='$idautor',ideditorial='$ideditorial',year_edicion='$year_edicion',idmateria='$idmateria',numero_paginas='$numero_paginas',formato='$formato',peso='$peso',descripcion='$descripcion',imagen='$imagen' WHERE idlibro='$idlibro'";
+		$sql="UPDATE libro SET titulo='$titulo',cantidad_disponible='$cantidad_disponible',idautor='$idautor',ideditorial='$ideditorial',year_edicion='$year_edicion',idmateria='$idmateria',numero_paginas='$numero_paginas',descripcion='$descripcion',imagen='$imagen' WHERE idlibro='$idlibro'";
 		return ejecutarConsulta($sql);
 	}
 
@@ -49,7 +49,7 @@ Class Libro
 	//Implementar un método para listar los registros
 	public function listar()
 	{
-		$sql="SELECT l.idlibro,l.titulo,l.cantidad_disponible,l.idautor,a.nombre as autor,l.ideditorial,e.nombre as editorial,l.year_edicion,l.idmateria,m.nombre as materia,l.numero_paginas,l.formato,l.peso,l.descripcion,l.imagen,l.estado FROM libro l INNER JOIN autor a on l.idautor=a.idautor INNER JOIN editorial e ON l.ideditorial=e.ideditorial INNER JOIN materia m ON l.idmateria=m.idmateria";
+		$sql="SELECT l.idlibro,l.titulo,l.cantidad_disponible,l.idautor,a.nombre as autor,l.ideditorial,e.nombre as editorial,l.year_edicion,l.idmateria,m.nombre as materia,l.numero_paginas,l.descripcion,l.imagen,l.estado FROM libro l INNER JOIN autor a on l.idautor=a.idautor INNER JOIN editorial e ON l.ideditorial=e.ideditorial INNER JOIN materia m ON l.idmateria=m.idmateria";
 		return ejecutarConsulta($sql);		
 	}
 

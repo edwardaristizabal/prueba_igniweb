@@ -22,7 +22,7 @@ include "header.php";
               <div class="col-md-12">
                   <div class="box">
                     <div class="box-header with-border">
-                      <h1 class="box-title">Usuario <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i>Agregar </button></h1>
+                      <h1 class="box-title">Users <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> New User </button></h1>
                     </div>
                     <!-- /.box-header -->
                     <!-- centro -->
@@ -31,14 +31,14 @@ include "header.php";
                           <thead>
                             <th>ID</th>
                             <th>Opciones</th>
-                            <th>N° Trabajador</th>
-                            <th>Número de Documento</th>
-                            <th>Nombre</th>
-                            <th>Profesión</th>
-                            <th>Cargo</th>
-                            <th>Direccion</th>
-                            <th>Telefono</th>
-                            <th>Email</th>
+                            <th>Suscription Code</th>
+                            <th>Id number</th>
+                            <th>Name and Surname</th>
+                            <th>Profession</th>
+                            <th>Occupation</th>
+                            <th>Address</th>
+                            <th>Telephone</th>
+                            <th>E-mail</th>
                             <th>Login</th>
                           </thead>
                           <tbody>                            
@@ -48,7 +48,7 @@ include "header.php";
                     <div class="panel-body" style="height: 400px;" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Número Trabajador:</label>
+                            <label>Suscription Code:</label>
                             <input type="hidden" name="idusuario" id="idusuario">
                             <input type="text" class="form-control" name="numero_trabajador" id="numero_trabajador" maxlength="20" placeholder="Número Trabajador" required>
                           </div>
@@ -57,8 +57,8 @@ include "header.php";
                             <input type="text" class="form-control" name="num_documento" id="num_documento" maxlength="8" placeholder="Número de Documento" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre" maxlength="50" placeholder="Nombre" required>
+                            <label>Name and Surnames:</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" maxlength="50" placeholder="Enter you Name and Surname" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Profesión:</label>
@@ -90,8 +90,8 @@ include "header.php";
                             <input type="password" class="form-control" name="clave" id="clave" maxlength="20" placeholder="Clave" required>
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                            <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Save</button>
+                            <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancel</button>
                           </div>
                         </form>
                     </div>

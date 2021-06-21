@@ -116,7 +116,7 @@ function mostrar(ideditorial) {
 
 //Función para desactivar registros
 function desactivar(ideditorial) {
-    bootbox.confirm("¿Está Seguro de desactivar la Categoría?", function(result) {
+    bootbox.confirm("¿Are you sure you want to deactivate the category?", function(result) {
         if (result) {
             $.post("../ajax/editorial.php?op=desactivar", { ideditorial: ideditorial }, function(e) {
                 bootbox.alert(e);
@@ -128,7 +128,7 @@ function desactivar(ideditorial) {
 
 //Función para activar registros
 function activar(ideditorial) {
-    bootbox.confirm("¿Está Seguro de activar Editorial?", function(result) {
+    bootbox.confirm("¿Are you sure to activate editorial?", function(result) {
         if (result) {
             $.post("../ajax/editorial.php?op=activar", { ideditorial: ideditorial }, function(e) {
                 bootbox.alert(e);

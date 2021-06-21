@@ -34,8 +34,6 @@ function limpiar() {
     $("#titulo").val("");
     $("#cantidad_disponible").val("");
     $("#numero_paginas").val("");
-    $("#formato").val("");
-    $("#peso").val("");
     $("#descripcion").val("");
     $("#imagenmuestra").attr("src", "");
     $("#imagenactual").val("");
@@ -139,8 +137,6 @@ function mostrar(idlibro) {
         $("#idmateria").val(data.idmateria);
         $('#idmateria').selectpicker('refresh');
         $("#numero_paginas").val(data.numero_paginas);
-        $("#formato").val(data.formato);
-        $("#peso").val(data.peso);
         $("#descripcion").val(data.descripcion);
         $("#imagenmuestra").show();
         $("#imagenmuestra").attr("src", "../files/libros/" + data.imagen);
@@ -152,7 +148,7 @@ function mostrar(idlibro) {
 
 //Función para desactivar registros
 function desactivar(idlibro) {
-    bootbox.confirm("¿Está Seguro de desactivar el libro?", function(result) {
+    bootbox.confirm("¿You are sure to deactivate the book?", function(result) {
         if (result) {
             $.post("../ajax/libro.php?op=desactivar", { idlibro: idlibro }, function(e) {
                 bootbox.alert(e);
@@ -164,7 +160,7 @@ function desactivar(idlibro) {
 
 //Función para activar registros
 function activar(idlibro) {
-    bootbox.confirm("¿Está Seguro de activar el Libro?", function(result) {
+    bootbox.confirm("¿Are you sure to activate the book??", function(result) {
         if (result) {
             $.post("../ajax/libro.php?op=activar", { idlibro: idlibro }, function(e) {
                 bootbox.alert(e);

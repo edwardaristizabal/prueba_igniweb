@@ -116,7 +116,7 @@ function mostrar(idmateria) {
 
 //Función para desactivar registros
 function desactivar(idmateria) {
-    bootbox.confirm("¿Está Seguro de desactivar la Categoría?", function(result) {
+    bootbox.confirm("¿Are you sure you want to deactivate the category?", function(result) {
         if (result) {
             $.post("../ajax/materia.php?op=desactivar", { idmateria: idmateria }, function(e) {
                 bootbox.alert(e);
@@ -128,7 +128,7 @@ function desactivar(idmateria) {
 
 //Función para activar registros
 function activar(idmateria) {
-    bootbox.confirm("¿Está Seguro de activar la Categoría?", function(result) {
+    bootbox.confirm("¿Are you sure to activate the category?", function(result) {
         if (result) {
             $.post("../ajax/materia.php?op=activar", { idmateria: idmateria }, function(e) {
                 bootbox.alert(e);

@@ -134,7 +134,7 @@ function mostrar(idusuario) {
  *Para eliminar un registro
  */
 function eliminarFila(idusuario) {
-    bootbox.confirm("¿Está Seguro de eliminar el Usuario?", function(result) { // confirmamos con una pregunta si queremos eliminar
+    bootbox.confirm("¿Are you sure to delete the user?", function(result) { // confirmamos con una pregunta si queremos eliminar
         if (result) {
             $.post("../ajax/usuario.php?op=eliminar", { idusuario: idusuario }, function(e) {
                 bootbox.alert(e);
