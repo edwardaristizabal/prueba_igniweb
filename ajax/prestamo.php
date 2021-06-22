@@ -14,11 +14,11 @@ $observacion=isset($_POST["observacion"])? limpiarCadena($_POST["observacion"]):
 switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (empty($idprestamo)){
-			$rspta=$prestamo->insertar($idlibro,$idestudiante,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
+			$rspta=$prestamo->insertar($idlibro,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
 			echo $rspta ? "Registered loan" : "Loan could not be registered";
 		}
 		else {
-			$rspta=$prestamo->editar($idprestamo,$idlibro,$idestudiante,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
+			$rspta=$prestamo->editar($idprestamo,$idlibro,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion);
 			echo $rspta ? "Update loan" : "Loan could not be update";
 		}
 	break;
