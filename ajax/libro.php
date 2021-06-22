@@ -33,22 +33,22 @@ switch ($_GET["op"]){
 		}
 		if (empty($idlibro)){
 			$rspta=$libro->insertar($titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$descripcion,$imagen);
-			echo $rspta ? "Libro registrado" : "Libro no se pudo registrar";
+			echo $rspta ? "Registered book" : "Book could not be registered";
 		}
 		else {
 			$rspta=$libro->editar($idlibro,$titulo,$cantidad_disponible,$idautor,$ideditorial,$year_edicion,$idmateria,$numero_paginas,$descripcion,$imagen);
-			echo $rspta ? "Libro actualizado" : "Libro no se pudo actualizar";
+			echo $rspta ? "Updated book" : "Book could not be update";
 		}
 	break;
 
 	case 'desactivar':
 		$rspta=$libro->desactivar($idlibro);
- 		echo $rspta ? "Libro Desactivado" : "Libro no se puede desactivar";
+ 		echo $rspta ? "Book disabled" : "Book cannot be disabled";
 	break;
 
 	case 'activar':
 		$rspta=$libro->activar($idlibro);
- 		echo $rspta ? "Libro activado" : "Libro no se puede activar";
+ 		echo $rspta ? "Book enabled" : "Book cannot be activated";
 	break;
 
 	case 'mostrar':

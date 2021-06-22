@@ -83,12 +83,12 @@ function listar() {
             }
         },
         "language": {
-            "lengthMenu": "Mostrar : _MENU_ registros",
+            "lengthMenu": "Show : _MENU_ records",
             "buttons": {
-                "copyTitle": "Tabla Copiada",
+                "copyTitle": "Copied table",
                 "copySuccess": {
-                    _: '%d líneas copiadas',
-                    1: '1 línea copiada'
+                    _: '%d copied lines',
+                    1: '1 copied line'
                 }
             }
         },
@@ -148,7 +148,7 @@ function mostrar(idprestamo) {
 
 //Función para anular registros
 function anular(idprestamo) {
-    bootbox.confirm("¿Devolución del libro?", function(result) {
+    bootbox.confirm("¿Return of the book?", function(result) {
         if (result) {
             $.post("../ajax/prestamo.php?op=anular", { idprestamo: idprestamo }, function(e) {
                 bootbox.alert(e);

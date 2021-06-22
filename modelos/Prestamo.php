@@ -14,7 +14,7 @@ Class Prestamo
 	public function insertar($idlibro,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion)
 	{
 		$sql="INSERT INTO prestamo (idlibro,idestudiante,fecha_prestamo,fecha_devolucion,cantidad,observacion,estado)
-		VALUES ('$idlibro','$fecha_prestamo','$fecha_devolucion','$cantidad','$observacion','Prestado')";
+		VALUES ('$idlibro','$fecha_prestamo','$fecha_devolucion','$cantidad','$observacion','Loaned')";
 		return ejecutarConsulta($sql);
 	}
 
@@ -34,7 +34,7 @@ Class Prestamo
 //Implementamos un método para anular prestamo
 	public function anular($idprestamo)
 	{
-		$sql="UPDATE prestamo SET estado='Devuelto' WHERE idprestamo='$idprestamo'";
+		$sql="UPDATE prestamo SET estado='Returned' WHERE idprestamo='$idprestamo'";
 		return ejecutarConsulta($sql);
 	}
 
