@@ -11,17 +11,17 @@ Class usuario
 	}
 
 	//Implementamos un método para insertar registros
-	public function insertar($numero_trabajador,$dni,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave)
+	public function insertar($codigo_trabajador,$num_documento,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave)
 	{
-		$sql="INSERT INTO usuario (numero_trabajador,dni,nombre,profesion,cargo,direccion,telefono,email,login,clave)
-		VALUES ('$numero_trabajador','$dni','$nombre','$profesion','$cargo','$direccion','$telefono','$email','$login','$clave')";
+		$sql="INSERT INTO usuario (codigo_trabajador,num_documento,nombre,profesion,cargo,direccion,telefono,email,login,clave)
+		VALUES ('$codigo_trabajador','$num_documento','$nombre','$profesion','$cargo','$direccion','$telefono','$email','$login','$clave')";
 		return ejecutarConsulta($sql);
 	}
 
 	//Implementamos un método para editar registros
-	public function editar($idusuario,$numero_trabajador,$dni,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave)
+	public function editar($idusuario,$codigo_trabajador,$num_documento,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave)
 	{
-		$sql="UPDATE usuario SET numero_trabajador='$numero_trabajador',dni='$dni',nombre='$nombre',profesion='$profesion',cargo='$cargo',direccion='$direccion',telefono='$telefono',email='$email',login='$login',clave='$clave' WHERE idusuario='$idusuario'";
+		$sql="UPDATE usuario SET codigo_trabajador='$codigo_trabajador',num_documento='$num_documento',nombre='$nombre',profesion='$profesion',cargo='$cargo',direccion='$direccion',telefono='$telefono',email='$email',login='$login',clave='$clave' WHERE idusuario='$idusuario'";
 		return ejecutarConsulta($sql);
 	}
 

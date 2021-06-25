@@ -62,7 +62,7 @@ function listar() {
             }
         },
         "language": {
-            "lengthMenu": "Mostrar : _MENU_ registros",
+            "lengthMenu": "Show: _MENU_ records",
             "buttons": {
                 "copyTitle": "Tabla Copiada",
                 "copySuccess": {

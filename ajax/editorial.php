@@ -12,22 +12,22 @@ switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (empty($ideditorial)){
 			$rspta=$editorial->insertar($nombre,$descripcion);
-			echo $rspta ? "Editorial registrada" : "Editorial no se pudo registrar";
+			echo $rspta ? "Registered editorial" : "Could not be registered editorial";
 		}
 		else {
 			$rspta=$editorial->editar($ideditorial,$nombre,$descripcion);
-			echo $rspta ? "Editorial actualizada" : "Editorial no se pudo actualizar";
+			echo $rspta ? "Update editorial" : "Could not update editorial";
 		}
 	break;
 
 	case 'desactivar':
 		$rspta=$editorial->desactivar($ideditorial);
- 		echo $rspta ? "Editorial Desactivada" : "Editorial no se puede desactivar";
+ 		echo $rspta ? "Desactivated editorial" : "cannot be deactivated editorial";
 	break;
 
 	case 'activar':
 		$rspta=$editorial->activar($ideditorial);
- 		echo $rspta ? "Editorial activada" : "Editorial no se puede activar";
+ 		echo $rspta ? "Activated editorial" : "Cannot be activated editorial";
 	break;
 
 	case 'mostrar':
@@ -49,8 +49,8 @@ switch ($_GET["op"]){
  					' <button class="btn btn-primary" onclick="activar('.$reg->ideditorial.')"><i class="fa fa-check"></i></button>',
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
- 				"3"=>($reg->estado)?'<span class="label bg-green">Activado</span>':
- 				'<span class="label bg-red">Desactivado</span>'
+ 				"3"=>($reg->estado)?'<span class="label bg-green">Activated</span>':
+ 				'<span class="label bg-red">Disable</span>'
  				);
  		}
  		$results = array(

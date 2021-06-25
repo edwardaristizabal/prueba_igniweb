@@ -49,8 +49,8 @@ switch ($_GET["op"]){
  				"3"=>$reg->fecha_devolucion,
  				"4"=>$reg->cantidad,
  				"5"=>$reg->observacion,
- 				"6"=>($reg->estado=='Prestado')?'<span class="label bg-green">Prestado</span>':
- 				'<span class="label bg-red">Devuelto</span>'
+ 				"6"=>($reg->estado=='Prestado')?'<span class="label bg-green">Lean</span>':
+ 				'<span class="label bg-red">Return</span>'
  				);
  		}
  		$results = array(

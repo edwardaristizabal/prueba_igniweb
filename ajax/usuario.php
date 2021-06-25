@@ -21,11 +21,11 @@ switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (empty($idusuario)){
 			$rspta=$usuario->insertar($codigo_trabajador,$num_documento,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave);
-			echo $rspta ? "Usuario registrado" : "Usuario no se pudo registrar";
+			echo $rspta ? "Registered user" : "User could not register";
 		}
 		else {
 			$rspta=$usuario->editar($idusuario,$codigo_trabajador,$num_documento,$nombre,$profesion,$cargo,$direccion,$telefono,$email,$login,$clave);
-			echo $rspta ? "Usuario actualizado" : "Usuario no se pudo actualizar";
+			echo $rspta ? "Updated user" : "User could not update";
 		}
 	break;
 
@@ -37,7 +37,7 @@ switch ($_GET["op"]){
 
 	case 'eliminar':
     $rspta=$usuario->eliminar($idusuario);
-    echo $rspta ? "Usuario Eliminado" : "Usuario no se puede eliminar";
+    echo $rspta ? "Deleted User" : "User cannot be deleted";
 
     break;
 

@@ -22,24 +22,24 @@ include "header.php";
               <div class="col-md-12">
                   <div class="box">
                     <div class="box-header with-border">
-                      <h1 class="box-title">Users <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> New User </button></h1>
+                      <h1 class="box-title">Users <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i>New User </button></h1>
                     </div>
                     <!-- /.box-header -->
                     <!-- centro -->
                     <div class="panel-body table-responsive" id="listadoregistros">
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                           <thead>
-                            <th>ID</th>
-                            <th>Opciones</th>
-                            <th>Suscription Code</th>
-                            <th>Id number</th>
-                            <th>Name and Surname</th>
+                            <th>User consecutive</th>
+                            <th>Options</th>
+                            <th>Suscriptor code</th>
+                            <th>Identification number</th>
+                            <th>User Name</th>
                             <th>Profession</th>
-                            <th>Occupation</th>
+                            <th>Ocupation</th>
                             <th>Address</th>
-                            <th>Telephone</th>
+                            <th>Telephone number</th>
                             <th>E-mail</th>
-                            <th>Login</th>
+                            <th>Login User</th>
                           </thead>
                           <tbody>                            
                           </tbody>
@@ -48,46 +48,46 @@ include "header.php";
                     <div class="panel-body" style="height: 400px;" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Suscription Code:</label>
+                            <label>Suscriptor code:</label>
                             <input type="hidden" name="idusuario" id="idusuario">
-                            <input type="text" class="form-control" name="numero_trabajador" id="numero_trabajador" maxlength="20" placeholder="Número Trabajador" required>
+                            <input type="text" class="form-control" name="codigo_trabajador" id="codigo_trabajador" maxlength="20" placeholder="Enter you suscriptor code" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Número de Documento:</label>
-                            <input type="text" class="form-control" name="num_documento" id="num_documento" maxlength="8" placeholder="Número de Documento" required>
+                            <label>Identification number:</label>
+                            <input type="text" class="form-control" name="num_documento" id="num_documento" maxlength="8" placeholder="Enter you identification number" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Name and Surnames:</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre" maxlength="50" placeholder="Enter you Name and Surname" required>
+                            <label>User Name:</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" maxlength="50" placeholder="Enter you user name" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Profesión:</label>
-                            <input type="text" class="form-control" name="profesion" id="profesion" maxlength="30" placeholder="Profesión">
+                            <label>Profession:</label>
+                            <input type="text" class="form-control" name="profesion" id="profesion" maxlength="30" placeholder="Enter you profession">
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Cargo:</label>
-                             <input type="text" class="form-control" name="cargo" id="cargo" maxlength="30" placeholder="Cargo">
+                            <label>Ocupation:</label>
+                             <input type="text" class="form-control" name="cargo" id="cargo" maxlength="30" placeholder="Enter you ocupation">
                             </select>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Dirección:</label>
-                            <input type="text" class="form-control" name="direccion" id="direccion" maxlength="70" placeholder="Dirección" required>
+                            <label>Address:</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" maxlength="70" placeholder="Enter you address" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Teléfono:</label>
-                            <input type="text" class="form-control" name="telefono" id="telefono" maxlength="20" placeholder="Teléfono" required>
+                            <label>Telephone number:</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono" maxlength="20" placeholder="Enter you telephone number" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Email:</label>
-                            <input type="email" class="form-control" name="email" id="email" maxlength="50" placeholder="Email">
+                            <label>E-mail:</label>
+                            <input type="email" class="form-control" name="email" id="email" maxlength="50" placeholder="E-mail">
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Login:</label>
-                            <input type="text" class="form-control" name="login" id="login" maxlength="20" placeholder="Login" required>
+                            <label>Login User:</label>
+                            <input type="text" class="form-control" name="login" id="login" maxlength="20" placeholder="Enter login user" required>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Password:</label>
-                            <input type="password" class="form-control" name="clave" id="clave" maxlength="20" placeholder="Clave" required>
+                            <input type="password" class="form-control" name="clave" id="clave" maxlength="20" placeholder="Enter you password" required>
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Save</button>

@@ -26,22 +26,22 @@ switch ($_GET["op"]){
 		}
 		if (empty($idautor)){
 			$rspta=$autor->insertar($nombre,$descripcion,$imagen);
-			echo $rspta ? "Autor registrado" : "Autor no se pudo registrar";
+			echo $rspta ? "Registered author" : "Author could not register";
 		}
 		else {
 			$rspta=$autor->editar($idautor,$nombre,$descripcion,$imagen);
-			echo $rspta ? "Autor actualizado" : "Autor no se pudo actualizar";
+			echo $rspta ? "Author updated" : "Author could not update";
 		}
 	break;
 
 	case 'desactivar':
 		$rspta=$autor->desactivar($idautor);
- 		echo $rspta ? "Autor Desactivado" : "Autor no se puede desactivar";
+ 		echo $rspta ? "Author Deactivated" : "Author cannot be deactivated";
 	break;
 
 	case 'activar':
 		$rspta=$autor->activar($idautor);
- 		echo $rspta ? "Autor activado" : "Autor no se puede activar";
+ 		echo $rspta ? "Author activated" : "Author cannot activate";
 	break;
 
 	case 'mostrar':
@@ -64,8 +64,8 @@ switch ($_GET["op"]){
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
  				"3"=>"<img src='../files/autores/".$reg->imagen."' height='50px' width='50px' >",
- 				"4"=>($reg->estado)?'<span class="label bg-green">Activado</span>':
- 				'<span class="label bg-red">Desactivado</span>'
+ 				"4"=>($reg->estado)?'<span class="label bg-green">Activated</span>':
+ 				'<span class="label bg-red">Disable</span>'
  				);
  		}
  		$results = array(

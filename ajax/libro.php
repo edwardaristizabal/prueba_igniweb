@@ -77,8 +77,8 @@ switch ($_GET["op"]){
  				"7"=>$reg->numero_paginas,
  				"8"=>$reg->descripcion,
  				"9"=>"<img src='../files/libros/".$reg->imagen."' height='50px' width='50px' >",
- 				"10"=>($reg->estado)?'<span class="label bg-green">Activado</span>':
- 				'<span class="label bg-red">Desactivado</span>'
+ 				"10"=>($reg->estado)?'<span class="label bg-green">Activated</span>':
+ 				'<span class="label bg-red">Disable</span>'
  				);
  		}
  		$results = array(

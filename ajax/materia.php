@@ -10,22 +10,22 @@ switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (empty($idmateria)){
 			$rspta=$materia->insertar($nombre,$descripcion);
-			echo $rspta ? "Materia registrada" : "Materia no se pudo registrar";
+			echo $rspta ? "Registered topic" : "Topic could not be registered";
 		}
 		else {
 			$rspta=$materia->editar($idmateria,$nombre,$descripcion);
-			echo $rspta ? "Materia actualizada" : "Materia no se pudo actualizar";
+			echo $rspta ? "Topic updated" : "topic could not be updated";
 		}
 	break;
 
 	case 'desactivar':
 		$rspta=$materia->desactivar($idmateria);
- 		echo $rspta ? "Materia Desactivada" : "Materia no se puede desactivar";
+ 		echo $rspta ? "Topic deactivated" : "Topic cannot be deactivated";
 	break;
 
 	case 'activar':
 		$rspta=$materia->activar($idmateria);
- 		echo $rspta ? "Materia activada" : "Materia no se puede activar";
+ 		echo $rspta ? "Topic activated" : "Topic cannot be activated";
 	break;
 
 	case 'mostrar':
@@ -47,8 +47,8 @@ switch ($_GET["op"]){
  					' <button class="btn btn-primary" onclick="activar('.$reg->idmateria.')"><i class="fa fa-check"></i></button>',
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
- 				"3"=>($reg->estado)?'<span class="label bg-green">Activado</span>':
- 				'<span class="label bg-red">Desactivado</span>'
+ 				"3"=>($reg->estado)?'<span class="label bg-green">Activated</span>':
+ 				'<span class="label bg-red">Disable</span>'
  				);
  		}
  		$results = array(
