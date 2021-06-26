@@ -83,7 +83,7 @@ function listar() {
             }
         },
         "language": {
-            "lengthMenu": "Mostrar : _MENU_ records",
+            "lengthMenu": "Show : _MENU_ records",
             "buttons": {
                 "copyTitle": "Copied table",
                 "copySuccess": {

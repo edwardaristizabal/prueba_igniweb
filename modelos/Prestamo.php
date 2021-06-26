@@ -13,7 +13,7 @@ Class Prestamo
 	//Implementamos un método para insertar registros
 	public function insertar($idlibro,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion)
 	{
-		$sql="INSERT INTO prestamo (idlibro,idestudiante,fecha_prestamo,fecha_devolucion,cantidad,observacion,estado)
+		$sql="INSERT INTO prestamo (idlibro,fecha_prestamo,fecha_devolucion,cantidad,observacion,estado)
 		VALUES ('$idlibro','$fecha_prestamo','$fecha_devolucion','$cantidad','$observacion','Loaned')";
 		return ejecutarConsulta($sql);
 	}
