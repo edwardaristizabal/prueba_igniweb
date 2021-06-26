@@ -14,7 +14,7 @@ Class Prestamo
 	public function insertar($idlibro,$fecha_prestamo,$fecha_devolucion,$cantidad,$observacion)
 	{
 		$sql="INSERT INTO prestamo (idlibro,fecha_prestamo,fecha_devolucion,cantidad,observacion,estado)
-		VALUES ('$idlibro','$fecha_prestamo','$fecha_devolucion','$cantidad','$observacion','Loaned')";
+		VALUES ('$idlibro','$fecha_prestamo','$fecha_devolucion','$cantidad','$observacion','Loan')";
 		return ejecutarConsulta($sql);
 	}
 
