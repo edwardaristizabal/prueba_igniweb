@@ -134,7 +134,7 @@ INSERT INTO `materia` (`idmateria`, `nombre`, `descripcion`, `estado`) VALUES
 CREATE TABLE `prestamo` (
   `idprestamo` int(11) NOT NULL,
   `idlibro` int(11) NOT NULL,
-  `idusuario` int(11) NOT NULL,
+  `idusuario` int(11) NULL,
   `fecha_prestamo` date NOT NULL,
   `fecha_devolucion` date NOT NULL,
   `cantidad` int(11) NOT NULL,

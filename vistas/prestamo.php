@@ -56,7 +56,7 @@ require 'header.php';
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                           <label>Return Date:</label>
-                          <input type="date" name="fecha_devolucion" id="fecha_devolucion" class="form-control" placeholder="Enter you Return Date" required>
+                          <input type="date" name="fecha_devolucion" id="fecha_devolucion" class="form-control" placeholder="Enter return date" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                           <label>Quantity:</label>
