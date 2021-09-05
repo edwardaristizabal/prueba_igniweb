@@ -2,7 +2,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 1.0
         </div>
-        <strong><a>Edward Andrés Aristizábal Montalvo</a></strong>
+        <strong><a href='https://www.linkedin.com/in/edwardaristizabal'>Edward Andrés Aristizábal Montalvo</a></strong>
     </footer>    
     <!-- jQuery -->
     <script src="../public/js/jquery-3.1.1.min.js"></script>
@@ -22,5 +22,6 @@
 
     <script src="../public/js/bootbox.min.js"></script> 
     <script src="../public/js/bootstrap-select.min.js"></script>
+
   </body>
 </html>
